@@ -1,0 +1,6 @@
+<xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
+  <category name="DHT20" colour="#ae00ae" icon="temperature">
+    <block type="xbot_dht20_measure" />
+    <block type="xbot_dht20_read" />
+  </category>
+</xml>
