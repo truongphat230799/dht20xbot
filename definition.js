@@ -39,7 +39,13 @@ Blockly.Blocks["xbot_dht20_read"] = {
             type: "field_dropdown",
             name: "port",
             options: [
-                ["4","4"]
+                ["2","2"],
+                ["3","3"],
+                ["4","4"],
+                ["5","5"],
+                ["6","6"]
+
+
             ]
         },
       ],
