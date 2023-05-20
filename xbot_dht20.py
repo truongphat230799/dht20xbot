@@ -1,5 +1,5 @@
-from machine import Pin, SoftI2C
-from time import sleep, ticks_ms
+from machine import *
+from time import sleep_ms, ticks_ms
 import math
 from micropython import const
 from setting import *
@@ -69,12 +69,10 @@ class DHTApi:
         return round(humidity, 1)
 
 class DHT20(DHTApi):
-    def __init__(self,port, i2c):
-        
+    def __init__(self,port, i2c):        
 #        self.i2c = i2c
 #       if (self.dht20_read_status() & 0x80) == 0x80:
 #          super().dht20_init()  
-
         # Grove port: GND VCC SCL SDA
         scl_pin = machine.Pin(PORTS_DIGITAL[port][0])
         sda_pin = machine.Pin(PORTS_DIGITAL[port][1])

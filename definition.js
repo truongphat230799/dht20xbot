@@ -61,7 +61,7 @@ Blockly.Python["xbot_dht20_read"] = function(block) {
   var dropdown_data = block.getFieldValue("DATA");
   // TODO: Assemble Python into code variable.
   Blockly.Python.definitions_['import_dht20'] = 'from xbot_dht20 import DHT20';
-  Blockly.Python.definitions_["import_create_dht20"] = "xbotdht20 = DHT20(SoftI2C(scl=Pin(22), sda=Pin(21))";
+  Blockly.Python.definitions_["import_create_dht20"] = "xbotdht20 = DHT20(SoftI2C(scl_pin=Pin(22), sda_pin=Pin(21))";
   //Blockly.Python.definitions_['import_dht20_create'] = 'from lcd_1602 import LCD1602';
   var code = "";
   if (dropdown_data == "TEMP")
