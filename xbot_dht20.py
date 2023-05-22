@@ -6,13 +6,12 @@ from setting import *
 from utility import *
 
 class DHT20(object):
-    def __init__(self,port, i2c):        
-        self.i2c = i2c  
+    def __init__(self,port):
         # Grove port: GND VCC SCL SDA
         scl_pin = machine.Pin(PORTS_DIGITAL[port][0])
-        sda_pin = machine.Pin(PORTS_DIGITAL[port][1])
-        self.i2c = machine.SoftI2C(scl=scl_pin, sda=sda_pin)
+        sda_pin = machine.Pin(PORTS_DIGITAL[port][1])        
         try:
+            self.i2c = machine.SoftI2C(scl=scl_pin, sda=sda_pin)
             if (self.dht20_read_status() & 0x80) == 0x80:
                 super().dht20_init()
         except:
