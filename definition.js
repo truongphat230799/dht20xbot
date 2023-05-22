@@ -33,7 +33,7 @@ Blockly.Blocks["xbot_dht20_init"] = {
 Blockly.Python["xbot_dht20_init"] = function(block) {
   var port = block.getFieldValue("PORT");
   // TODO: Assemble Python into code variable.
-    var code = "xbotdht20 = DHT20(port" + port + ")\n";
+    var code = "xbotdht20 = DHT20(port=" + port + ")\n";
   return code;
 };
 Blockly.Blocks["xbot_dht20_measure"] = {
