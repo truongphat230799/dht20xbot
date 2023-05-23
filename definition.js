@@ -1,7 +1,7 @@
 Blockly.Blocks["xbot_dht20_init"] = {
   init: function() {
     this.jsonInit({
-      message0: "khởi tạo cảm biến nhiệt độ, độ ẩm cổng %1",
+      message0: "khởi tạo cảm biến DHT20 cổng %1",
       args0: [
         {
             type: "field_dropdown",
@@ -39,7 +39,7 @@ Blockly.Python["xbot_dht20_init"] = function(block) {
 Blockly.Blocks["xbot_dht20_measure"] = {
   init: function() {
     this.jsonInit({
-      message0: "cập nhật giá trị cảm biến nhiệt độ độ ẩm",
+      message0: "cập nhật giá trị cảm biến DHT20",
       args0: [
       ],
       previousStatement: null,
